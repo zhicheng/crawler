@@ -28,9 +28,8 @@ def parsing_index_page(url):
     global page_num
     next_page_url = 'http://jandan.net/category/playbus/page/%d' % page_num 
     page_num += 1
-    print next_page_url
-    parsing_index_page(next_page_url)
     if page_num > 19: return
+    parsing_index_page(next_page_url)
 
 if __name__ == '__main__':
     start_url = "http://jandan.net/category/playbus/"
